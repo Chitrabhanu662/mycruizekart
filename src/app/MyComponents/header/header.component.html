@@ -1,0 +1,492 @@
+<!-- Header
+	       ============================================= -->
+         <header id="header">
+          <div class="container">
+            <!-- Fixed Promoheader bar -->
+            <div class="fixed-header1 d-none d-sm-block" id="headerattention">
+            </div>
+            <!-- Code Added offer header End Here -->
+            <div class="header-row">
+              <div class="header-column justify-content-start">
+        
+                <!-- Logo
+                          ============================================= -->
+                <div class="logo">
+                  <a href="index.html" title="">
+                    <img src="../assets/images/home-logo.png" width='162' height='70' alt="KruiseKart.com" /></a>
+                </div> <!-- Logo end -->
+              </div>
+        
+              <div class="header-column justify-content-end">
+              
+                <!-- Primary Navigation
+                          ============================================= -->
+                <nav class="primary-menu navbar navbar-expand-lg">
+                  <div id="header-nav" class="collapse navbar-collapse">
+                    <div>
+                      <ul class="navbar-nav">
+                      </ul>
+                    </div>
+                    <ul class="navbar-nav">
+                      <div class="my_account">
+                        <div class="sub_header_link3"  id="helloAcc">
+                        <!-- <div class="sub_header_link3" *ngIf="agent.AgencyName" id="helloAcc"> -->
+                          <!-- <span id="spnMyAcc"
+                            style="display: inline;">
+                            Hello {{agent.AgencyName.split(' ')[0]}} {{balancestr}}</span> -->
+                          <!-- <i class="down_arw"></i> -->
+                          <div class="dropdown-menu3">
+                            <div class="booking_pnl">
+                              <a class="sb_link_2" href="#" >hello</a>
+                              
+                              <!-- <a class="sb_link_2" *ngFor="let item of menuItems" href="{{item.Link}}">{{item.Parent}}</a> -->
+                              <a class="sb_link_2" data-toggle="modal"  href="#">Logout</a>
+                              <!-- <a class="sb_link_2" data-toggle="modal" (click)="logoutagent()" href="#">Logout</a> -->
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div id="myAcc" >
+                        <!-- <div id="myAcc" *ngIf="portaltype == 'B2C'"> -->
+                          <span id="spnMyAcc" style="display: inline;">{{'My
+                            Account'}}</span>
+                          <i class="down_arw"></i>
+                          <div class="dropdown-menu3">
+                            <div class="new_avtar_hp"></div>
+                            <div class="signup_pnl" id="divSignInPnl" style="display: block;">
+                              <a class="btn_signin" data-toggle="modal" data-target="#login-signup" 
+                                href="#">Customer Login</a>
+                              <!-- <a class="btn_signin" data-toggle="modal" data-target="#login-signup" *ngIf="!user.firstname"
+                                href="#">Customer Login</a> -->
+                              <a class="pl-lg-4 pr-0" data-toggle="modal"  href="#"
+                                title="Hello {{user.firstname}}"> {{user.firstname}}<span
+                                  class="d-none d-lg-inline-block">
+                                  <i class="fas fa-user"></i></span></a>
+                              <!-- <a class="pl-lg-4 pr-0" data-toggle="modal" *ngIf="user.firstname" (click)="logout()" href="#"
+                                title="Hello {{user.firstname}}">Hello {{user.firstname}}(logout)<span
+                                  class="d-none d-lg-inline-block">
+                                  <i class="fas fa-user"></i></span></a> -->
+        
+        
+                              <!-- <a class="btn_register RegInHome" data-toggle="modal" data-target="#login-signup"
+                                href="#signup-tab">Register</a> -->
+        
+        
+                            </div>
+                            <div class="booking_pnl">
+                              <a class="btn_signin" data-toggle="modal" data-target="#agentloginSignup" href="#"
+                                href="#">{{logintxt}}</a>
+                              <!-- <a class="sb_link_2" data-toggle="modal" data-target="#agentloginSignup"
+                                href="#signup-tab">{{signuptxt}}</a> -->
+                            </div>
+                          </div>
+                        </div>
+        
+                      </div>
+                      <div class="my_account">
+                        <div id="myAcchelp"><span id="spnMyAcc" style="display: inline;">{{'helpline'}} </span>
+                          <i class="down_arw"></i>
+                          <div class="dropdown-menu3">
+                            <div class="booking_pnl2">
+                              <!-- <a class="sb_link_2" title="Offers" target="_blank" href="/offers.html">Offers</a> -->
+                              <a class="sb_link_2" title="Support" target="_blank"
+                                routerLink="/customersupport">{{'Support'}}</a>
+                              <a class="sb_link_2" target="_blank" routerLink="/contactus" title="Contact Us">
+                                {{'Contact Us'}}</a>
+                              <a class="sb_link_2" data-toggle="modal" data-target="#AgentCallBack" href="#"
+                                title="Agent Call Back Support" href="#">{{'Call Back Support'}}</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mybooking" >
+                      <!-- <div class="mybooking" *ngIf="portaltype=='B2C'"> -->
+                        <div class="">
+                          <a class="sbmybooking" data-toggle="modal" data-target="#b2ceticketdata" href="#" title="My Bookings"
+                            href="#">{{'My Bookings'}}</a>
+                        </div>
+                      </div>
+                      <div class="new_avtar_hp d-none d-sm-block"></div>
+                      <!-- <div><a href="hot-deals" title="Hot Deals"><i class="fas fa-bell"></i></a></div> -->
+                    </ul>
+                  </div>
+                </nav><!-- Primary Navigation end -->
+        
+              </div>
+        
+              <!-- Collapse Button
+                        ============================================= -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span>
+                <span></span> <span></span> </button>
+            </div>
+          </div>
+        </header>
+        <!-- Header end -->
+        <!-- Modal Dialog - Login/Signup
+              ============================================= -->
+        <div id="agentloginSignup" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"> <a id="agentlogin-tab" class="nav-link active text-abc" data-toggle="tab"
+                      href="#agentlogin" role="tab" aria-controls="login" aria-selected="true">{{logintxt}}</a> </li>
+                  <li class="nav-item"> <a id="agentsignup-tab" class="nav-link text-abc" data-toggle="tab" href="#agentsignup"
+                      role="tab" aria-controls="signup" aria-selected="false">{{signuptxt}}</a> </li>
+                </ul>
+                <div class="tab-content pt-4">
+                  <div class="tab-pane fade show active" id="agentlogin" role="tabpanel" aria-labelledby="login-tab">
+                    <form id="agentloginForm" method="post">
+                      <div class="form-group">
+                        <!-- <input type="email" name="username" [(ngModel)]="username" class="form-control" id="agentloginMobile"
+                          required placeholder="Mobile or Email ID"> -->
+                      
+                        <input type="email" name="username"  class="form-control" id="agentloginMobile"
+                          required placeholder="Mobile or Email ID">
+                      </div>
+                      <div class="form-group">
+                        <!-- <input type="password" name="password" [(ngModel)]="password" class="form-control"
+                          id="agentloginPassword" required placeholder="Password"> -->
+                        <input type="password" name="password"  class="form-control"
+                          id="agentloginPassword" required placeholder="Password">
+                      </div>
+                      <div class="row mb-4">
+                        <!-- <div class="col-sm">
+                                  <div class="form-check custom-control custom-checkbox">
+                                    <input id="agentremember-me" name="remember" class="custom-control-input" type="checkbox">
+                                    <label class="custom-control-label" for="remember-me">Remember Me</label>
+                                  </div>
+                                </div> -->
+                        <div class="col-sm text-right"> 
+                          <!-- <a class="justify-content-end text-abc" (click)="forgetpassword()"
+                            href="javascript:void(0)">Forgot Password ?</a>  -->
+                          <a class="justify-content-end text-abc" 
+                            href="javascript:void(0)">Forgot Password ?</a> 
+                          </div>
+        
+                      </div>
+                      <button class="btn btn-primary btn-block"  type="submit">Submit</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="login()" type="submit">Submit</button> -->
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" id="agentsignup" role="tabpanel" aria-labelledby="signup-tab">
+                    <form id="agentsignupForm" method="post">
+                      <div class="form-group">
+                        <input type="text" class="form-control" data-bv-field="number"  id="agentsignupEmail"
+                          name="email" required placeholder="Email ID*">
+                        <!-- <input type="text" class="form-control" data-bv-field="number" [email]="true" id="agentsignupEmail"
+                          name="email" [(ngModel)]="agent.email" required placeholder="Email ID*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentsignupAgency" name="agentsignupAgency"
+                          required placeholder="Company Name*">
+                        <!-- <input type="text" class="form-control" id="agentsignupAgency" name="agentsignupAgency"
+                          [(ngModel)]="agent.agencyName" required placeholder="Company Name*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="agentsignupPhone" name="phone" required
+                          placeholder="Phone Number*" type="tel" minlength="10" maxlength="10">
+                        <!-- <input class="form-control" id="agentsignupPhone" name="phone" [(ngModel)]="agent.phone" required
+                          placeholder="Phone Number*" type="tel" minlength="10" maxlength="10" (keypress)="keyPress($event)"> -->
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="agentsignupMobile" name="agentsignupMobile" 
+                          required placeholder="Mobile Number*" type="tel" minlength="10" maxlength="10">
+                        <!-- <input class="form-control" id="agentsignupMobile" name="agentsignupMobile" [(ngModel)]="agent.mobile"
+                          required placeholder="Mobile Number*" type="tel" minlength="10" maxlength="10"
+                          (keypress)="keyPress($event)"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentfName" 
+                          name="firstName"  required placeholder="first Name*">
+                        <!-- <input type="text" class="form-control" id="agentfName" (keypress)="onlyAlphabets($event)"
+                          name="firstName" [(ngModel)]="agent.contactPerson" required placeholder="first Name*"> -->
+                      </div>
+                      <div class="form-group">
+                        <!-- <input type="text" class="form-control" id="agentlName" (keypress)="onlyAlphabets($event)"
+                          name="lastName" [(ngModel)]="agent.lastName" required placeholder="last Name*"> -->
+                        <input type="text" class="form-control" id="agentlName" 
+                          name="lastName"  required placeholder="last Name*">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="designation" name="designation"
+                          required placeholder="Designation">
+                        <!-- <input type="text" class="form-control" id="designation" name="designation"
+                          [(ngModel)]="agent.designation" required placeholder="Designation"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="agentsignuploginPassword" name="password"
+                          required placeholder="Password*">
+                        <!-- <input type="password" class="form-control" id="agentsignuploginPassword" name="password"
+                          [(ngModel)]="agent.password" required placeholder="Password*"> -->
+                      </div>
+                      <div class="form-group">
+                        <!-- <input type="text" class="form-control" id="agentaddress" name="address" 
+                          required placeholder="Address"> -->
+                        <input type="text" class="form-control" id="agentaddress" name="address" [(ngModel)]="agent.address"
+                          required placeholder="Address">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentcity" name="city" 
+                           placeholder="City">
+                        <!-- <input type="text" class="form-control" id="agentcity" name="city" (keypress)="onlyAlphabets($event)"
+                          [(ngModel)]="agent.city" placeholder="City"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentstate" name="state" 
+                          placeholder="State">
+                        <!-- <input type="text" class="form-control" id="agentstate" name="state" (keypress)="onlyAlphabets($event)"
+                          [(ngModel)]="agent.state" placeholder="State"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentcountry" 
+                          name="country" placeholder="Country">
+                        <!-- <input type="text" class="form-control" id="agentcountry" (keypress)="onlyAlphabets($event)"
+                          name="country" [(ngModel)]="agent.country" placeholder="Country"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="agentzip" name="pin" 
+                          placeholder="PIN code" minlength="6" maxlength="6">
+                        <!-- <input type="text" class="form-control" id="agentzip" name="pin" [(ngModel)]="agent.pincode"
+                          placeholder="PIN code" minlength="6" maxlength="6"> -->
+                      </div>
+                      <div class="form-group" >
+                      <!-- <div class="form-group" *ngIf="GSTNdiv=='Yes'"> -->
+                        <input type="text" class="form-control" id="agentgst" name="gstNo" 
+                          placeholder="GST No">
+                        <!-- <input type="text" class="form-control" id="agentgst" name="gstNo" [(ngModel)]="agent.gstNo"
+                          placeholder="GST No"> -->
+                      </div>
+                      <div class="form-group" >
+                      <!-- <div class="form-group" *ngIf="GSTNdiv=='Yes'"> -->
+                        <input type="text" class="form-control" id="agentpan" name="panNo" 
+                          placeholder="PAN No">
+                        <!-- <input type="text" class="form-control" id="agentpan" name="panNo" [(ngModel)]="agent.panNo"
+                          placeholder="PAN No"> -->
+                      </div>
+                      <div class="form-group">
+                        <h6>Choose Logo</h6>
+                        <!-- <input type="file" name="image" (change)="readLogoFile($event)" /> -->
+                      </div>
+                      <button class="btn btn-primary btn-block"  type="submit">Submit</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="register()" type="submit">Submit</button> -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="b2ceticketdata" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"> <a id="b2ceticket-tab" class="nav-link active text-abc" data-toggle="tab"
+                      href="#b2ceticket" role="tab" aria-controls="login" aria-selected="true">View/Print your booking</a> </li>
+                </ul>
+                <div class="tab-content pt-4">
+                  <div class="tab-pane fade show active" id="b2ceticket" role="tabpanel" aria-labelledby="login-tab">
+                    <form id="b2ceticketForm" method="post">
+                      <div class="form-group">
+                        <input type="Bookingref" name="Bookingref"
+                          id="b2ceticketBookingref" required placeholder="Booking Ref No">
+                        <!-- <input type="Bookingref" name="Bookingref" [(ngModel)]="Bookingref" class="form-control"
+                          id="b2ceticketBookingref" required placeholder="Booking Ref No"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="b2ceticketemail" required
+                          placeholder="Email ID">
+                        <!-- <input type="email" name="email" [(ngModel)]="email" class="form-control" id="b2ceticketemail" required
+                          placeholder="Email ID"> -->
+                      </div>
+                      <button class="btn btn-primary btn-block" type="submit">Show Booking</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="ShowBooking()" type="submit">Show Booking</button> -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="AgentCallBack" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"> <a id="AgentCallBack-tab" class="nav-link active text-abc" data-toggle="tab"
+                      href="#AgentCallBack" role="tab" aria-controls="login" aria-selected="true">Call Back Support</a> </li>
+                </ul>
+                <div class="tab-content pt-4">
+                  <div class="tab-pane fade show active" id="AgentCallBack" role="tabpanel" aria-labelledby="login-tab">
+                    <form id="AgentCallBackForm" method="post">
+                      <div class="form-group">
+                        <input class="form-control" id="Callmobile" name="Callmobile"  required
+                          placeholder="Mobile Number*" type="tel" minlength="10" maxlength="10">
+                        <!-- <input class="form-control" id="Callmobile" name="Callmobile" [(ngModel)]="Callmobile" required
+                          placeholder="Mobile Number*" type="tel" minlength="10" maxlength="10" (keypress)="keyPress($event)"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="Callagentemail"class="form-control"
+                          id="AgentCallBackemail" required placeholder="Email ID">
+                        <!-- <input type="email" name="Callagentemail" [(ngModel)]="Callagentemail" class="form-control"
+                          id="AgentCallBackemail" required placeholder="Email ID"> -->
+                      </div>
+                      <div class="form-group">
+                        <textarea class="form-control" list="Massage" name="Massage" required
+                          placeholder="Remarks" type="text">
+                                  </textarea>
+                        <!-- <textarea [(ngModel)]="Callagentremarks" class="form-control" list="Massage" name="Massage" required
+                          placeholder="Remarks" type="text">
+                                  </textarea> -->
+                      </div>
+                      <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="callbacksubmit()" type="submit">Submit</button> -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Dialog - Login/Signup
+        ============================================= -->
+        <div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login"
+                      role="tab" aria-controls="login" aria-selected="true">Login</a> </li>
+                  <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab"
+                      aria-controls="signup" aria-selected="false">Sign Up</a> </li>
+                </ul>
+                <div class="tab-content pt-4">
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form id="loginForm" method="post">
+                      <div class="form-group">
+                        <input type="email" name="username"  class="form-control" id="loginMobile"
+                          required placeholder="Mobile or Email ID">
+                        <!-- <input type="email" name="username" [(ngModel)]="username" class="form-control" id="loginMobile"
+                          required placeholder="Mobile or Email ID"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password"  class="form-control" id="loginPassword"
+                          required placeholder="Password">
+                        <!-- <input type="password" name="password" [(ngModel)]="password" class="form-control" id="loginPassword"
+                          required placeholder="Password"> -->
+                      </div>
+                      <div class="row mb-4">
+                        <!-- <div class="col-sm">
+                            <div class="form-check custom-control custom-checkbox">
+                              <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
+                              <label class="custom-control-label" for="remember-me">Remember Me</label>
+                            </div>
+                          </div> -->
+                        <div class="col-sm text-right">
+                          <a class="justify-content-end"  href="javascript:void(0)">Forgot Password
+                            ?</a>
+                          <!-- <a class="justify-content-end" (click)="forgetpassword()" href="javascript:void(0)">Forgot Password
+                            ?</a> -->
+                        </div>
+                      </div>
+                      <button class="btn btn-primary btn-block"  type="submit">Login</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="loginb2c()" type="submit">Login</button> -->
+                      <!-- <button class="btn btn-primary btn-block" (click)="signInWithGoogle()" type="submit">Google Login</button> -->
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                    <form id="signupForm" method="post">
+                      <div class="form-group">
+                        <input type="text" class="form-control" data-bv-field="number"  id="signupEmail"
+                          name="email" required placeholder="Email ID*">
+                        <!-- <input type="text" class="form-control" data-bv-field="number" [email]="true" id="signupEmail"
+                          name="email" [(ngModel)]="user.email" required placeholder="Email ID*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="signupMobile" name="signupMobile" type="tel" minlength="10"
+                          maxlength="10"   required
+                          placeholder="Mobile Number*">
+                        <!-- <input class="form-control" id="signupMobile" name="signupMobile" type="tel" minlength="10"
+                          maxlength="10" (keypress)="keyPress($event)" [(ngModel)]="user.mobile" required
+                          placeholder="Mobile Number*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="fName"  name="firstName"
+                          required placeholder="first Name*">
+                        <!-- <input type="text" class="form-control" id="fName" (keypress)="onlyAlphabets($event)" name="firstName"
+                          [(ngModel)]="user.firstName" required placeholder="first Name*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="lName" name="lastName" 
+                         required placeholder="last Name*">
+                        <!-- <input type="text" class="form-control" id="lName" name="lastName" (keypress)="onlyAlphabets($event)"
+                          [(ngModel)]="user.lastName" required placeholder="last Name*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signuploginPassword" name="password"
+                          required placeholder="Password*">
+                        <!-- <input type="password" class="form-control" id="signuploginPassword" name="password"
+                          [(ngModel)]="user.password" required placeholder="Password*"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="address" name="address" required 
+                          placeholder="Address">
+                        <!-- <input type="text" class="form-control" id="address" name="address" required [(ngModel)]="user.address"
+                          placeholder="Address"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="city"  name="city"
+                          placeholder="City">
+                        <!-- <input type="text" class="form-control" id="city" (keypress)="onlyAlphabets($event)" name="city"
+                          [(ngModel)]="user.city" placeholder="City"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="state"  name="state"
+                          placeholder="State">
+                        <!-- <input type="text" class="form-control" id="state" (keypress)="onlyAlphabets($event)" name="state"
+                          [(ngModel)]="user.state" placeholder="State"> -->
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="country" name="country" 
+                          placeholder="Country">
+                       
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="zip" name="pin" minlength="6" maxlength="6"
+                        [(ngModel)]="user.pincode" placeholder="PIN code">
+                        <!-- <input type="text" class="form-control" id="zip" name="pin" minlength="6" maxlength="6"
+                          [(ngModel)]="user.pincode" placeholder="PIN code"> -->
+                      </div>
+                      <button class="btn btn-primary btn-block" type="submit">Signup</button>
+                      <!-- <button class="btn btn-primary btn-block" (click)="registerb2c()" type="submit">Signup</button> -->
+                    </form>
+                  </div>
+                  <!-- <div class="d-flex align-items-center my-4">
+                      <hr class="flex-grow-1">
+                      <span class="mx-2">OR</span>
+                      <hr class="flex-grow-1">
+                    </div> -->
+                  <!-- <div class="row">
+                      <div class="col-12 mb-3">
+                        <button type="button" class="btn btn-block btn-outline-primary">Login with Facebook</button>
+                      </div>
+                      <div class="col-12">
+                        <button type="button" class="btn btn-block btn-outline-danger">Login with Google</button>
+                      </div>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- Modal Dialog - Login/Signup end -->
+        <!-- Modal Dialog - Login/Signup end -->

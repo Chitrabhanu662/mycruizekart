@@ -1,0 +1,123 @@
+<div class="hero-wrap py-5">
+    <div class="hero-mask opacity-7"></div>
+  
+    <!-- Slideshow Background -->
+    <div class="hero-bg-slideshow owl-carousel">
+      <div class="item">
+        <div class="hero-bg" style="background-image:url('../../../assets/img/image-4.jpg');"></div>
+      </div>
+      <div class="item">
+        <div class="hero-bg" style="background-image:url('../../../assets/img/image-7.jpg');"></div>
+      </div>
+      <div class="item">
+        <div class="hero-bg" style="background-image:url('../../../assets/img/image-2.jpg');"></div>
+      </div>
+    </div>
+    <!-- Slideshow Background End -->
+  
+    <div class="hero-content">
+      <div class="container mt-2 pt-4 header_search">
+  
+        <!-- Home Nav Start-->
+        <!-- <ul class="nav nav-tabs style-3 justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-flight icon"></i></span> Flights</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-hotel icon"></i></span> Hotels</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-visa icon"></i></span> Visa</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-holidays icon"></i></span> Holidays</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-forex icon"></i></span> Forex</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-bus icon"></i></span> Bus</a> </li>
+          <li class="nav-item"> <a class="nav-link active"><span><i class="ak-cruise icon"></i></span> Cruise</a> </li>
+          <li class="nav-item"> <a class="nav-link"><span><i class="ak-more icon"></i></span> More</a> </li>
+        </ul> -->
+        <!-- Home Nav End-->
+  
+        <div class="tab-content pt-4 pb-2 search_field_row">
+          <div class="col-12">
+            <h1 class="text-dark text-center top_head">Book Domestic and International Cruise</h1>
+  
+            <!-- Search Start-->
+            <div class="tab-pane fade show active search_field_box" id="hotels" role="tabpanel"
+              aria-labelledby="hotels-tab">
+              <form id="bookingHotels" method="post" autocomplete="off">
+                <div class="row no-gutters search-input-2">
+                  <div class="col-lg-4 col-md-12 col-sm-12 form-group">
+                    <h5>Search Destinations/River</h5>
+
+                    <input type="text" name="city" [(ngModel)]="place" 
+                       class="form-control" id="hotelsFrom" required
+                      placeholder="Enter City" autocomplete="off">
+                    <!-- <input type="text" name="city" [(ngModel)]="place" (click)="makeItBlank($event)"
+                      (keyup)="getLocations($event)" class="form-control" id="hotelsFrom" required
+                      placeholder="Enter City" autocomplete="off"> -->
+
+
+                    <div id="autocomplete-list" class="autocomplete-items">
+
+                      <!-- <div *ngFor="let l of locations" (click)="setLocation(l.Destination)">
+                        <strong>{{l.Destination}}</strong></div> -->
+                      <div *ngFor="let l of locations">
+                        <strong>{{l.Destination}}</strong></div>
+                        
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="col-lg-2 col-md-6 col-sm-12 col-12 form-group">
+                    <h5 class="pd_left"><span class="icon-inside"><i class="far fa-calendar-alt"></i></span> Dates</h5>
+                    <select class="custom-select" name="sailDate" [(ngModel)]="sailDate" id="hotelsCheckIn" required>
+                      <option [ngValue]="''">Sail Months</option>
+                      <option *ngFor="let sm of sailMonths" [ngValue]="sm">{{sm.month}}</option>
+                    </select>
+                    <!-- <input id="hotelsCheckIn" type="text" class="form-control" required placeholder="Check In">
+                      <p *ngFor="let sm of sailMonths" >Friday</p> -->
+                  </div>
+                  <div class="divider_sm"></div>
+                  <div class="col-lg-2 col-md-6 col-sm-12 col-12 form-group">
+                    <h5 class="pd_left"><span class="icon-inside"><i class="far fa-calendar-alt"></i></span>Days</h5>
+                    <select class="custom-select" name="duration" [(ngModel)]="duration" id="operator" required>
+                      <option [ngValue]="''">Select Nights</option>
+                      <option [ngValue]="'1:3'">1 To 3 night(s)</option>
+                      <option [ngValue]="'4:6'">4 To 6 night(s)</option>
+                      <option [ngValue]="'7:9'">7 To 9 night(s)</option>
+                      <option [ngValue]="'10:13'">10 To 13 night(s)</option>
+                      <option [ngValue]="'14:30'">More than 13 night(s)</option>
+                    </select>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="col-lg-2 col-md-12 col-sm-12 form-group">
+                    <h5>Cruiselines</h5>
+                    <select class="custom-select" name="cruise" [(ngModel)]="cruiseLine" id="cruiselines" required>
+                      <option [ngValue]="''">Select Cruise Line</option>
+                      <option *ngFor="let c of cruiseLines" [ngValue]="c">{{c.CruiseLine}}</option>
+                    </select>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="col-lg-2 col-md-12 form-group">
+                    <button class="search_btn" type="submit" (click)="getCruiseAvailability()">Search Cruise</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Search End-->
+  
+            <!-- Resend search Start-->
+            <!-- <div class="thirdsection-head">
+                <ul class="links">
+                  <li> <a>You’ve Searched </a> </li>
+                </ul>
+              </div>
+              <div class="thirdsection">
+                <ul class="recent-searches ">
+                  <li> <a class="box" href="#aaa">Kerala<span>01 Apr 2020</span></a> <a class="ak-close" href="#bbb"></a> </li>
+                  <li> <a class="box" href="#aaa">Bangalore<span>02 Apr 2020</span></a> <a class="ak-close" href="#bbb"></a> </li>
+                  <li> <a class="box" href="#aaa">Delhi<span>15 Apr 2020</span></a> <a class="ak-close" href="#bbb"></a> </li>
+                  <li> <a class="box" href="#aaa">Singapore<span>15 Apr 2020</span></a> <a class="ak-close" href="#bbb"></a> </li>
+                  <li> <a class="clear">Clear All</a> </li>
+                </ul>
+              </div> -->
+            <!-- Resend search End-->
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
